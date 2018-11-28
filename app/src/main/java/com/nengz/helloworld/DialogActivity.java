@@ -31,7 +31,6 @@ public class DialogActivity extends AppCompatActivity {
         mBtnDialog4.setOnClickListener(onClick);
         mBtnDialog5.setOnClickListener(onClick);
     }
-
     class OnClick implements View.OnClickListener {
 
         @Override
@@ -102,6 +101,7 @@ public class DialogActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_dialog5:
                     AlertDialog.Builder builder5 = new AlertDialog.Builder(DialogActivity.this);
+                    //在layout里面布局
                     View view = LayoutInflater.from(DialogActivity.this).inflate(R.layout.layout_dialog,null);
                     EditText etUserName = view.findViewById(R.id.et_username);
                     EditText etPassword = view.findViewById(R.id.et_password);
