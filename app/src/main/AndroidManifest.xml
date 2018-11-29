@@ -33,7 +33,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ProgressActivity"></activity>
+        <activity android:name=".ProgressActivity" />
+        <activity android:name=".CustomDialogActivity"></activity>
     </application>
 
 </manifest>

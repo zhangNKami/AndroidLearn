@@ -21,6 +21,7 @@ public class UIActivity extends AppCompatActivity {
     private Button mBtnToast;
     private Button mBtnDialog;
     private Button mBtnProgress;
+    private Button mBtnCoustomDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +38,7 @@ public class UIActivity extends AppCompatActivity {
         mBtnToast = findViewById(R.id.btn_toast);
         mBtnDialog = findViewById(R.id.btn_dialog);
         mBtnProgress = findViewById(R.id.btn_progress);
+        mBtnCoustomDialog = findViewById(R.id.btn_customdialog);
         setListeners();
     }
 
@@ -53,6 +55,7 @@ public class UIActivity extends AppCompatActivity {
         mBtnToast.setOnClickListener(onClick);
         mBtnDialog.setOnClickListener(onClick);
         mBtnProgress.setOnClickListener(onClick);
+        mBtnCoustomDialog.setOnClickListener(onClick);
     }
 
     private class OnClick implements View.OnClickListener {
@@ -105,7 +108,10 @@ public class UIActivity extends AppCompatActivity {
                     //跳转到Progress演示界面
                     intent  = new Intent(UIActivity.this,ProgressActivity.class);
                     break;
-
+                case R.id.btn_customdialog:
+                    //跳转到CustomDialog演示界面
+                    intent  = new Intent(UIActivity.this,CustomDialogActivity.class);
+                    break;
             }
             startActivity(intent);
         }
